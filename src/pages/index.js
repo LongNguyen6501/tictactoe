@@ -25,29 +25,32 @@ export default function Game() {
     setWinner(winCalculate(newBoardState))
   }
   return (
-    <div className="resultContainer">
+    <div>
       <h1 className="title">Tic Tac Toe</h1>
       <p className="winner">Winner: {winner}</p>
-      <div className="mainGame">
-        <div className="rows">
-          <Square value={boardState[0]} onClick={() => handleClick(0)} />
-          <Square value={boardState[1]} onClick={() => handleClick(1)} />
-          <Square value={boardState[2]} onClick={() => handleClick(2)} />
-        </div>
-
+      <section className="mainGame">
         <div>
-          <Square value={boardState[3]} onClick={() => handleClick(3)} />
-          <Square value={boardState[4]} onClick={() => handleClick(4)} />
-          <Square value={boardState[5]} onClick={() => handleClick(5)} />
-        </div>
+          <div>
+            <Square value={boardState[0]} onClick={() => handleClick(0)} />
+            <Square value={boardState[1]} onClick={() => handleClick(1)} />
+            <Square value={boardState[2]} onClick={() => handleClick(2)} />
+          </div>
 
-        <div>
-          <Square value={boardState[6]} onClick={() => handleClick(6)} />
-          <Square value={boardState[7]} onClick={() => handleClick(7)} />
-          <Square value={boardState[8]} onClick={() => handleClick(8)} />
+          <div>
+            <Square value={boardState[3]} onClick={() => handleClick(3)} />
+            <Square value={boardState[4]} onClick={() => handleClick(4)} />
+            <Square value={boardState[5]} onClick={() => handleClick(5)} />
+          </div>
+
+          <div>
+            <Square value={boardState[6]} onClick={() => handleClick(6)} />
+            <Square value={boardState[7]} onClick={() => handleClick(7)} />
+            <Square value={boardState[8]} onClick={() => handleClick(8)} />
+          </div>
         </div>
-      </div>
+      </section >
     </div>
+
   )
 }
 
